@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>My Form</title>
+  </head>
+  <body>
+    <!-- Then we’ll write the body section. The following code will enable user to
+    add a new employee to the database. -->
+
+    <header>
+      <h1>Employee Database</h1>
+    </header>
+    <div class="container">
+      <form action="/add" method="POST">
+        <fieldset>
+          <h3>Add new employee</h3>
+          <label>Employee ID</label>
+          <input type="text" id="empID" name="id" required />
+
+          <label>Name</label>
+          <input type="text" id="name" name="name" required />
+
+          <button class="btn-1" type="reset">Reset</button>
+          <button class="btn-2" type="submit">Submit</button>
+        </fieldset>
+      </form>
+
+      <!-- The code below will enable user to view any employee based on their ID
+    number. -->
+
+      <form action="/view" method="POST">
+        <fieldset>
+          <h3>View an employee</h3>
+          <label>Employee ID</label>
+          <input type="text" id="empID" name="id" required />
+
+          <button class="btn-1" type="reset">Reset</button>
+          <button class="btn-2" type="submit">Submit</button>
+          <br />
+        </fieldset>
+      </form>
+
+      <!-- The following two code snippets are for updating and deleting employees
+    from the database. -->
+
+      <form action="/update" method="POST">
+        <fieldset>
+          <h3>Update an employee</h3>
+          <label>Employee ID</label>
+          <input type="text" id="empID" name="id" required />
+
+          <label>New Name</label>
+          <input type="text" id="name" name="name" required />
+
+          <button class="btn-1" type="reset">Reset</button>
+          <button class="btn-2" type="submit">Submit</button>
+        </fieldset>
+      </form>
+      <form action="/delete" method="POST">
+        <fieldset>
+          <h3>Delete an employee</h3>
+          <label>Employee ID</label>
+          <input type="text" id="empID" name="id" required />
+
+          <button class="btn-1" type="reset">Reset</button>
+          <button class="btn-2" type="submit">Submit</button>
+          <br />
+        </fieldset>
+      </form>
+    </div>
+    <!--  At last we’ll include a footer which will tell the user how to close the 
+    database connection. -->
+    <footer>
+      <hr />
+      <h4>
+        Please enter 'http://localhost:3000/close' to close the database
+        connection before closing this window
+      </h4>
+    </footer>
+  </body>
+</html>
